@@ -7,6 +7,7 @@
 //
 
 #import "JSMTableViewController.h"
+#import "JSMToolbox.h"
 
 @interface JSMTableViewController () <UISearchBarDelegate>
 @property (nonatomic, strong) UIBarButtonItem *barButtonItemEdit;
@@ -49,7 +50,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     // Initialisieren der BarButtonItems
     self.barButtonItemAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(barButtonItemAddPressed:)];
     self.barButtonItemCancel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(barButtonItemCancelPressed:)];
@@ -63,7 +64,7 @@
     
     // Toolbar aufbauen
     self.toolbarItems = [NSArray arrayWithObjects:
-                         self.barButtonItemDelete, 
+                         self.barButtonItemDelete,
                          [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
                          self.barButtonItemAdd,
                          nil
@@ -134,44 +135,37 @@
     return [[[self.fetchedResultsController sections] objectAtIndex:section] numberOfObjects];
 }
 
-/*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return self.tableView.isEditing;
 }
-*/
 
-/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+        [[JSMCoreDataHelper managedObjectContext] deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
+    }
 }
-*/
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 #pragma mark - Table view delegate
 
@@ -197,6 +191,7 @@
 
 - (void) barButtonItemDonePressed: (id) sender
 {
+    [JSMCoreDataHelper saveManagedObjectContext:[JSMCoreDataHelper managedObjectContext]];
     [self.navigationController setToolbarHidden:YES animated:YES];
     [self.tableView setEditing:NO animated:YES];
     [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:self.barButtonItemEdit, self.barButtonItemSearch, nil] animated:YES];
@@ -205,6 +200,7 @@
 
 - (void) barButtonItemCancelPressed: (id) sender
 {
+    [[JSMCoreDataHelper managedObjectContext] rollback];
     [self.navigationController setToolbarHidden:YES animated:YES];
     [self.tableView setEditing:NO animated:YES];
     [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:self.barButtonItemEdit, self.barButtonItemSearch, nil] animated:YES];
@@ -220,7 +216,7 @@
         [self.tableView setContentOffset:CGPointMake(0, 0) animated:YES];
     } else {
         self.searchBar.text = nil;
-//        [self searchBar:self.searchBar textDidChange:nil];
+        //        [self searchBar:self.searchBar textDidChange:nil];
         if (self.tableView.contentOffset.y <= self.tableView.tableHeaderView.frame.size.height) {
             [self.tableView setContentOffset:CGPointMake(0, self.searchBar.frame.size.height) animated:YES];
             
@@ -245,7 +241,16 @@
 
 - (void) barButtonItemDeletePressed: (id) sender
 {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
+    JSMBlockAlertView *alert = [[JSMBlockAlertView alloc] initWithTitle:@"Bestätigung" message:@"Wollen Sie wirklich alle angezeigten Datensätze löschen?"];
+    [alert addButtonWithTitle:@"Ja" andBlock:^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            for (NSManagedObject *managedObject in self.fetchedResultsController.fetchedObjects) {
+                [[JSMCoreDataHelper managedObjectContext] deleteObject:managedObject];
+            }
+        });
+    }];
+    [alert addButtonWithTitle:@"Nein" andBlock:nil];
+    [alert show];
 }
 
 #pragma mark - must be overloaded methods
@@ -297,7 +302,7 @@
             break;
             
         case NSFetchedResultsChangeUpdate:
-            [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] 
+            [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
                              withRowAnimation:UITableViewRowAnimationFade];
             break;
             

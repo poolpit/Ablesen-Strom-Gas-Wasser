@@ -137,6 +137,8 @@
 		D012D72015FFD38C001FF130 /* JSMToolbox */ = {
 			isa = PBXGroup;
 			children = (
+				D012D6F815FFCEC4001FF130 /* JSMToolbox.h */,
+				D012D6F915FFCEC4001FF130 /* JSMToolbox.m */,
 				D012D6EE15FFCEC4001FF130 /* JSMBadgeLabel.h */,
 				D012D6EF15FFCEC4001FF130 /* JSMBadgeLabel.m */,
 				D012D6F015FFCEC4001FF130 /* JSMBlockActionSheet.h */,
@@ -147,8 +149,6 @@
 				D012D6F515FFCEC4001FF130 /* JSMCoreDataHelper.m */,
 				D012D6F615FFCEC4001FF130 /* JSMTableViewController.h */,
 				D012D6F715FFCEC4001FF130 /* JSMTableViewController.m */,
-				D012D6F815FFCEC4001FF130 /* JSMToolbox.h */,
-				D012D6F915FFCEC4001FF130 /* JSMToolbox.m */,
 			);
 			name = JSMToolbox;
 			sourceTree = "<group>";

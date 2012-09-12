@@ -20,7 +20,9 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
     [JSMCoreDataHelper performFetchOnFetchedResultsController: self.fetchedResultsController];
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
