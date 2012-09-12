@@ -31,8 +31,12 @@
     Werte *wert = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = wert.monatWert;
-    cell.detailTextLabel.text = wert.jahrWert;
+//    cell.textLabel.text = wert.monatWert;
+//    cell.detailTextLabel.text = wert.jahrWert;
+    cell.textLabel.text = [NSString stringWithFormat:@"Monat: %@, Jahr: %@, ", wert.monatWert, wert.jahrWert];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Strom: %@, Gas: %@, Wasser: %@", wert.stromWert, wert.gasWert, wert.wasserWert];
+
+    //cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", info.city, info.state];
     return cell;
 }
 

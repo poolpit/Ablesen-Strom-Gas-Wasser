@@ -1,9 +1,9 @@
 //
 //  Werte.m
-//  Inventar
+//  AblesenStrGaWa
 //
-//  Created by Peter Wiest on 11.09.12.
-//
+//  Created by Peter Wiest on 12.09.12.
+//  Copyright (c) 2012 Peter Wiest. All rights reserved.
 //
 
 #import "Werte.h"
@@ -11,7 +11,10 @@
 
 @implementation Werte
 
-@dynamic monatWert;
+@dynamic gasWert;
 @dynamic jahrWert;
+@dynamic monatWert;
+@dynamic stromWert;
+@dynamic wasserWert;
 
 @end

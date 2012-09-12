@@ -25,7 +25,7 @@
 		D012D71A15FFD1A1001FF130 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D012D71915FFD1A1001FF130 /* CoreData.framework */; };
 		D012D71D15FFD1B5001FF130 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D012D71C15FFD1B5001FF130 /* QuartzCore.framework */; };
 		D012D71E15FFD1D7001FF130 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D012D6FA15FFCEC4001FF130 /* Storyboard.storyboard */; };
-		D012D71F15FFD247001FF130 /* Werte.m in Sources */ = {isa = PBXBuildFile; fileRef = D012D6FC15FFCEC4001FF130 /* Werte.m */; };
+		D088702B160116C100011AC7 /* Werte.m in Sources */ = {isa = PBXBuildFile; fileRef = D088702A160116C100011AC7 /* Werte.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,11 +56,11 @@
 		D012D6F815FFCEC4001FF130 /* JSMToolbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSMToolbox.h; sourceTree = "<group>"; };
 		D012D6F915FFCEC4001FF130 /* JSMToolbox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSMToolbox.m; sourceTree = "<group>"; };
 		D012D6FA15FFCEC4001FF130 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		D012D6FB15FFCEC4001FF130 /* Werte.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Werte.h; sourceTree = "<group>"; };
-		D012D6FC15FFCEC4001FF130 /* Werte.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Werte.m; sourceTree = "<group>"; };
 		D012D6FE15FFCEC4001FF130 /* Werte.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Werte.xcdatamodel; sourceTree = "<group>"; };
 		D012D71915FFD1A1001FF130 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D012D71C15FFD1B5001FF130 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D0887029160116C100011AC7 /* Werte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Werte.h; sourceTree = "<group>"; };
+		D088702A160116C100011AC7 /* Werte.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Werte.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,28 +111,13 @@
 		D012D6D915FFCE9C001FF130 /* AblesenStrGaWa */ = {
 			isa = PBXGroup;
 			children = (
-				D012D6EA15FFCEC4001FF130 /* AblesenWerteTableViewController.h */,
-				D012D6EB15FFCEC4001FF130 /* AblesenWerteTableViewController.m */,
-				D012D6EC15FFCEC4001FF130 /* Constants.h */,
-				D012D6ED15FFCEC4001FF130 /* Constants.m */,
-				D012D6EE15FFCEC4001FF130 /* JSMBadgeLabel.h */,
-				D012D6EF15FFCEC4001FF130 /* JSMBadgeLabel.m */,
-				D012D6F015FFCEC4001FF130 /* JSMBlockActionSheet.h */,
-				D012D6F115FFCEC4001FF130 /* JSMBlockActionSheet.m */,
-				D012D6F215FFCEC4001FF130 /* JSMBlockAlertView.h */,
-				D012D6F315FFCEC4001FF130 /* JSMBlockAlertView.m */,
-				D012D6F415FFCEC4001FF130 /* JSMCoreDataHelper.h */,
-				D012D6F515FFCEC4001FF130 /* JSMCoreDataHelper.m */,
-				D012D6F615FFCEC4001FF130 /* JSMTableViewController.h */,
-				D012D6F715FFCEC4001FF130 /* JSMTableViewController.m */,
-				D012D6F815FFCEC4001FF130 /* JSMToolbox.h */,
-				D012D6F915FFCEC4001FF130 /* JSMToolbox.m */,
-				D012D6FA15FFCEC4001FF130 /* Storyboard.storyboard */,
-				D012D6FB15FFCEC4001FF130 /* Werte.h */,
-				D012D6FC15FFCEC4001FF130 /* Werte.m */,
-				D012D6FD15FFCEC4001FF130 /* Werte.xcdatamodeld */,
 				D012D6E215FFCE9C001FF130 /* AppDelegate.h */,
 				D012D6E315FFCE9C001FF130 /* AppDelegate.m */,
+				D012D72215FFD3B7001FF130 /* AblesenWerte */,
+				D012D72115FFD3A5001FF130 /* Constants */,
+				D012D72015FFD38C001FF130 /* JSMToolbox */,
+				D012D72315FFD3C7001FF130 /* Storyboard */,
+				D012D72415FFD3DC001FF130 /* AblesenDataModel */,
 				D012D6DA15FFCE9C001FF130 /* Supporting Files */,
 			);
 			path = AblesenStrGaWa;
@@ -147,6 +132,61 @@
 				D012D6E115FFCE9C001FF130 /* AblesenStrGaWa-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D012D72015FFD38C001FF130 /* JSMToolbox */ = {
+			isa = PBXGroup;
+			children = (
+				D012D6EE15FFCEC4001FF130 /* JSMBadgeLabel.h */,
+				D012D6EF15FFCEC4001FF130 /* JSMBadgeLabel.m */,
+				D012D6F015FFCEC4001FF130 /* JSMBlockActionSheet.h */,
+				D012D6F115FFCEC4001FF130 /* JSMBlockActionSheet.m */,
+				D012D6F215FFCEC4001FF130 /* JSMBlockAlertView.h */,
+				D012D6F315FFCEC4001FF130 /* JSMBlockAlertView.m */,
+				D012D6F415FFCEC4001FF130 /* JSMCoreDataHelper.h */,
+				D012D6F515FFCEC4001FF130 /* JSMCoreDataHelper.m */,
+				D012D6F615FFCEC4001FF130 /* JSMTableViewController.h */,
+				D012D6F715FFCEC4001FF130 /* JSMTableViewController.m */,
+				D012D6F815FFCEC4001FF130 /* JSMToolbox.h */,
+				D012D6F915FFCEC4001FF130 /* JSMToolbox.m */,
+			);
+			name = JSMToolbox;
+			sourceTree = "<group>";
+		};
+		D012D72115FFD3A5001FF130 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D012D6EC15FFCEC4001FF130 /* Constants.h */,
+				D012D6ED15FFCEC4001FF130 /* Constants.m */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		D012D72215FFD3B7001FF130 /* AblesenWerte */ = {
+			isa = PBXGroup;
+			children = (
+				D012D6EA15FFCEC4001FF130 /* AblesenWerteTableViewController.h */,
+				D012D6EB15FFCEC4001FF130 /* AblesenWerteTableViewController.m */,
+			);
+			name = AblesenWerte;
+			sourceTree = "<group>";
+		};
+		D012D72315FFD3C7001FF130 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D012D6FA15FFCEC4001FF130 /* Storyboard.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		D012D72415FFD3DC001FF130 /* AblesenDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				D0887029160116C100011AC7 /* Werte.h */,
+				D088702A160116C100011AC7 /* Werte.m */,
+				D012D6FD15FFCEC4001FF130 /* Werte.xcdatamodeld */,
+			);
+			name = AblesenDataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D012D71F15FFD247001FF130 /* Werte.m in Sources */,
 				D012D6E015FFCE9C001FF130 /* main.m in Sources */,
 				D012D6E415FFCE9C001FF130 /* AppDelegate.m in Sources */,
 				D012D70115FFD041001FF130 /* JSMBadgeLabel.m in Sources */,
@@ -224,6 +263,7 @@
 				D012D70515FFD05D001FF130 /* JSMTableViewController.m in Sources */,
 				D012D71415FFD107001FF130 /* Werte.xcdatamodeld in Sources */,
 				D012D6FF15FFD031001FF130 /* AblesenWerteTableViewController.m in Sources */,
+				D088702B160116C100011AC7 /* Werte.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

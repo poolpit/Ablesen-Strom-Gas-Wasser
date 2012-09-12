@@ -63,29 +63,29 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Lk-G1-EIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="AblesenWerteTableViewController" id="IfZ-5K-0pT" customClass="AblesenWerteTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hzY-bO-0M0">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="hzY-bO-0M0">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="werteCell" textLabel="QdR-1U-WVw" detailTextLabel="ylN-jW-jAz" style="IBUITableViewCellStyleSubtitle" id="5Ip-xb-Mgw">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="werteCell" textLabel="QdR-1U-WVw" detailTextLabel="RBQ-I5-3Us" rowHeight="50" style="IBUITableViewCellStyleSubtitle" id="5Ip-xb-Mgw">
+                                <rect key="frame" x="0.0" y="22" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="49"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QdR-1U-WVw">
-                                            <rect key="frame" x="10" y="2" width="38" height="22"/>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QdR-1U-WVw">
+                                            <rect key="frame" x="10" y="8" width="29" height="18"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ylN-jW-jAz">
-                                            <rect key="frame" x="10" y="24" width="47" height="18"/>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RBQ-I5-3Us">
+                                            <rect key="frame" x="10" y="26" width="41" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
@@ -105,7 +105,7 @@
                     <navigationItem key="navigationItem" title="Ablesewerte" id="Cqi-QE-l9P"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1305" y="-218"/>
+            <point key="canvasLocation" x="1199" y="-219"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="1Y9-Nq-6ba">
@@ -160,7 +160,7 @@
                     <navigationItem key="navigationItem" id="4Yz-WR-5lU"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1714" y="-218"/>
+            <point key="canvasLocation" x="1610" y="-219"/>
         </scene>
         <!--Navigation Controller - Dinge-->
         <scene sceneID="ClA-Jw-eIQ">
@@ -182,6 +182,14 @@
             <point key="canvasLocation" x="792" y="346"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AblesenWerteTableViewController" superclassName="JSMTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AblesenWerteTableViewController.h"/>
+        </class>
+        <class className="JSMTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JSMTableViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
