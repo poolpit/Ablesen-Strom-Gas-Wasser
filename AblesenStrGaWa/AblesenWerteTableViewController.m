@@ -10,6 +10,7 @@
 #import "Werte.h"
 #import "Constants.h"
 #import "JSMToolbox.h"
+#import "AblesenWerteStaticTableViewController.h"
 
 @interface AblesenWerteTableViewController ()
 @property (nonatomic, strong) NSFetchedResultsController *werteFetchedResultsController;
@@ -66,4 +67,37 @@
     
     return self.werteFetchedResultsController;
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"%s", "anfang preparefor seq");
+
+    if ([segue.identifier isEqualToString:@"showWert"]);
+    {
+        AblesenWerteStaticTableViewController *controller = segue.destinationViewController;
+        controller.wert = [self.fetchedResultsController objectAtIndexPath:[self.tableView indexPathForSelectedRow]];
+        NSLog(@"%s", "in show wert");
+
+        return;
+    }
+            NSLog(@"%s", "vo rneu werte");
+    if ([segue.identifier isEqualToString:@"neueWerte"]);
+    {
+
+        AblesenWerteStaticTableViewController *controller = segue.destinationViewController;
+        controller.wert = [JSMCoreDataHelper insertManagedObjectOfClass:[Werte class] inManagedObjectContext:[JSMCoreDataHelper managedObjectContext]];
+        NSLog(@"%s", "dsdjfdsfk");
+
+        return;
+    }
+
+}
+
+- (void) barButtonItemAddPressed: (id) sender
+{
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    [self performSegueWithIdentifier:@"neueWerte" sender:self];
+    
+}
+
 @end

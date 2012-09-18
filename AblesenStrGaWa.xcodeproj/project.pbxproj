@@ -26,6 +26,9 @@
 		D012D71D15FFD1B5001FF130 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D012D71C15FFD1B5001FF130 /* QuartzCore.framework */; };
 		D012D71E15FFD1D7001FF130 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D012D6FA15FFCEC4001FF130 /* Storyboard.storyboard */; };
 		D088702B160116C100011AC7 /* Werte.m in Sources */ = {isa = PBXBuildFile; fileRef = D088702A160116C100011AC7 /* Werte.m */; };
+		D088703216012CC900011AC7 /* toggle_log.png in Resources */ = {isa = PBXBuildFile; fileRef = D088703116012CC900011AC7 /* toggle_log.png */; };
+		D088703416012DD700011AC7 /* toggle_log1.png in Resources */ = {isa = PBXBuildFile; fileRef = D088703316012DD700011AC7 /* toggle_log1.png */; };
+		D09BCB711607B600002520A8 /* AblesenWerteStaticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09BCB701607B600002520A8 /* AblesenWerteStaticTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,10 @@
 		D012D71C15FFD1B5001FF130 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D0887029160116C100011AC7 /* Werte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Werte.h; sourceTree = "<group>"; };
 		D088702A160116C100011AC7 /* Werte.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Werte.m; sourceTree = "<group>"; };
+		D088703116012CC900011AC7 /* toggle_log.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle_log.png; sourceTree = "<group>"; };
+		D088703316012DD700011AC7 /* toggle_log1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle_log1.png; sourceTree = "<group>"; };
+		D09BCB6F1607B600002520A8 /* AblesenWerteStaticTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AblesenWerteStaticTableViewController.h; sourceTree = "<group>"; };
+		D09BCB701607B600002520A8 /* AblesenWerteStaticTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AblesenWerteStaticTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +89,8 @@
 		D012D6C415FFCE9C001FF130 = {
 			isa = PBXGroup;
 			children = (
+				D088703316012DD700011AC7 /* toggle_log1.png */,
+				D088703116012CC900011AC7 /* toggle_log.png */,
 				D012D6D915FFCE9C001FF130 /* AblesenStrGaWa */,
 				D012D6D215FFCE9C001FF130 /* Frameworks */,
 				D012D6D015FFCE9C001FF130 /* Products */,
@@ -167,6 +176,8 @@
 			children = (
 				D012D6EA15FFCEC4001FF130 /* AblesenWerteTableViewController.h */,
 				D012D6EB15FFCEC4001FF130 /* AblesenWerteTableViewController.m */,
+				D09BCB6F1607B600002520A8 /* AblesenWerteStaticTableViewController.h */,
+				D09BCB701607B600002520A8 /* AblesenWerteStaticTableViewController.m */,
 			);
 			name = AblesenWerte;
 			sourceTree = "<group>";
@@ -242,6 +253,8 @@
 			files = (
 				D012D71E15FFD1D7001FF130 /* Storyboard.storyboard in Resources */,
 				D012D6DE15FFCE9C001FF130 /* InfoPlist.strings in Resources */,
+				D088703216012CC900011AC7 /* toggle_log.png in Resources */,
+				D088703416012DD700011AC7 /* toggle_log1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +277,7 @@
 				D012D71415FFD107001FF130 /* Werte.xcdatamodeld in Sources */,
 				D012D6FF15FFD031001FF130 /* AblesenWerteTableViewController.m in Sources */,
 				D088702B160116C100011AC7 /* Werte.m in Sources */,
+				D09BCB711607B600002520A8 /* AblesenWerteStaticTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

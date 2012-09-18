@@ -103,6 +103,9 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    if (self.tableView.isEditing){
+        [self.navigationController setToolbarHidden:YES animated:YES];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
