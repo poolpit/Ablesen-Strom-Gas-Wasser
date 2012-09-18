@@ -29,6 +29,9 @@
 		D088703216012CC900011AC7 /* toggle_log.png in Resources */ = {isa = PBXBuildFile; fileRef = D088703116012CC900011AC7 /* toggle_log.png */; };
 		D088703416012DD700011AC7 /* toggle_log1.png in Resources */ = {isa = PBXBuildFile; fileRef = D088703316012DD700011AC7 /* toggle_log1.png */; };
 		D09BCB711607B600002520A8 /* AblesenWerteStaticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09BCB701607B600002520A8 /* AblesenWerteStaticTableViewController.m */; };
+		D0AB5FCB1608FF48006E24E3 /* 19-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AB5FCA1608FF48006E24E3 /* 19-gear.png */; };
+		D0AB5FCF1609004C006E24E3 /* 179-notepad.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AB5FCE1609004C006E24E3 /* 179-notepad.png */; };
+		D0AB5FD1160909D1006E24E3 /* 40-inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AB5FD0160909D1006E24E3 /* 40-inbox.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,10 +67,13 @@
 		D012D71C15FFD1B5001FF130 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D0887029160116C100011AC7 /* Werte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Werte.h; sourceTree = "<group>"; };
 		D088702A160116C100011AC7 /* Werte.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Werte.m; sourceTree = "<group>"; };
-		D088703116012CC900011AC7 /* toggle_log.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle_log.png; sourceTree = "<group>"; };
-		D088703316012DD700011AC7 /* toggle_log1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle_log1.png; sourceTree = "<group>"; };
+		D088703116012CC900011AC7 /* toggle_log.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = toggle_log.png; path = ../toggle_log.png; sourceTree = "<group>"; };
+		D088703316012DD700011AC7 /* toggle_log1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = toggle_log1.png; path = ../toggle_log1.png; sourceTree = "<group>"; };
 		D09BCB6F1607B600002520A8 /* AblesenWerteStaticTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AblesenWerteStaticTableViewController.h; sourceTree = "<group>"; };
 		D09BCB701607B600002520A8 /* AblesenWerteStaticTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AblesenWerteStaticTableViewController.m; sourceTree = "<group>"; };
+		D0AB5FCA1608FF48006E24E3 /* 19-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-gear.png"; sourceTree = "<group>"; };
+		D0AB5FCE1609004C006E24E3 /* 179-notepad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "179-notepad.png"; sourceTree = "<group>"; };
+		D0AB5FD0160909D1006E24E3 /* 40-inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "40-inbox.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,9 +95,8 @@
 		D012D6C415FFCE9C001FF130 = {
 			isa = PBXGroup;
 			children = (
-				D088703316012DD700011AC7 /* toggle_log1.png */,
-				D088703116012CC900011AC7 /* toggle_log.png */,
 				D012D6D915FFCE9C001FF130 /* AblesenStrGaWa */,
+				D0AB5FC91608FED7006E24E3 /* Icons */,
 				D012D6D215FFCE9C001FF130 /* Frameworks */,
 				D012D6D015FFCE9C001FF130 /* Products */,
 			);
@@ -200,6 +205,19 @@
 			name = AblesenDataModel;
 			sourceTree = "<group>";
 		};
+		D0AB5FC91608FED7006E24E3 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				D0AB5FD0160909D1006E24E3 /* 40-inbox.png */,
+				D0AB5FCA1608FF48006E24E3 /* 19-gear.png */,
+				D088703116012CC900011AC7 /* toggle_log.png */,
+				D0AB5FCE1609004C006E24E3 /* 179-notepad.png */,
+				D088703316012DD700011AC7 /* toggle_log1.png */,
+			);
+			name = Icons;
+			path = AblesenStrGaWa;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -255,6 +273,9 @@
 				D012D6DE15FFCE9C001FF130 /* InfoPlist.strings in Resources */,
 				D088703216012CC900011AC7 /* toggle_log.png in Resources */,
 				D088703416012DD700011AC7 /* toggle_log1.png in Resources */,
+				D0AB5FCB1608FF48006E24E3 /* 19-gear.png in Resources */,
+				D0AB5FCF1609004C006E24E3 /* 179-notepad.png in Resources */,
+				D0AB5FD1160909D1006E24E3 /* 40-inbox.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
