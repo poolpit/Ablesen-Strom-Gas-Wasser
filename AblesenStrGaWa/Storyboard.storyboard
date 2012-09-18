@@ -93,7 +93,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="9JY-WY-pTz" kind="push" identifier="showWert" id="v9y-I3-au5"/>
+                                    <segue destination="9JY-WY-pTz" kind="push" identifier="zeigeWerte" id="hcp-I7-5Y8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -104,7 +104,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Ablesewerte" id="Cqi-QE-l9P"/>
                     <connections>
-                        <segue destination="9JY-WY-pTz" kind="push" identifier="neueWerte" id="RGT-vk-9EK"/>
+                        <segue destination="9JY-WY-pTz" kind="push" identifier="neueWerte" id="3ro-eD-Utb"/>
                     </connections>
                 </tableViewController>
             </objects>
@@ -249,12 +249,31 @@
             <point key="canvasLocation" x="792" y="346"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AblesenWerteStaticTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AblesenWerteStaticTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="WerteEingebenDonePressed:"/>
+                <relationship kind="outlet" name="gasTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="jahrTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="monatTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="stromTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="wasserTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="AblesenWerteTableViewController" superclassName="JSMTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AblesenWerteTableViewController.h"/>
+        </class>
+        <class className="JSMTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JSMTableViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="RGT-vk-9EK"/>
+        <segue reference="3ro-eD-Utb"/>
     </inferredMetricsTieBreakers>
 </document>

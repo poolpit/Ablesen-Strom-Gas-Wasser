@@ -17,14 +17,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    Werte *wert = [JSMCoreDataHelper insertManagedObjectOfClass:[Werte class] inManagedObjectContext:[JSMCoreDataHelper managedObjectContext]];
+/*    Werte *wert = [JSMCoreDataHelper insertManagedObjectOfClass:[Werte class] inManagedObjectContext:[JSMCoreDataHelper managedObjectContext]];
     wert.monatWert = @"01";
     wert.jahrWert = @"2012";
     wert.stromWert = @"123,456";
     wert.gasWert = @"7890,12";
     wert.wasserWert = @"34,567";
     [JSMCoreDataHelper saveManagedObjectContext:[JSMCoreDataHelper managedObjectContext]];
-    
+*/
     return YES;
 }
 

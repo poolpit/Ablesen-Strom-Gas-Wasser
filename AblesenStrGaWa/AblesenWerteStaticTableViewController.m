@@ -43,15 +43,12 @@
         self.wasserTextView.text = self.wert.wasserWert;
         self.monatTextView.text = self.wert.monatWert;
         self.jahrTextView.text = self.wert.jahrWert;
-    }
+
         if (self.wert.isInserted == true) {
             self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(WerteEingebenCancelPressed:)];
             [self.navigationController setToolbarHidden:YES animated:YES];
-            NSLog(@"%s", __PRETTY_FUNCTION__);
-
         }
-        
-   
+    }
 }
 
 - (void)viewDidUnload
@@ -107,9 +104,6 @@
         self.wert.jahrWert = self.jahrTextView.text;
 
         [JSMCoreDataHelper saveManagedObjectContext:[JSMCoreDataHelper managedObjectContext]];
-        NSLog(@"%s", __PRETTY_FUNCTION__);
-
-        
     }
     [self.navigationController popViewControllerAnimated:YES];
     
