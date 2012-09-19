@@ -108,7 +108,7 @@
                         <sections>
                             <tableViewSection headerTitle="Ablesewerte" id="P5n-yD-SWS">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="138" id="sps-ps-Ypz">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="wertCell" rowHeight="138" id="sps-ps-Ypz">
                                         <rect key="frame" x="0.0" y="46" width="320" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -227,7 +227,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Oss-tv-nF8">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="verbrauchCell" id="Oss-tv-nF8">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -279,11 +279,11 @@
             </objects>
             <point key="canvasLocation" x="792" y="346"/>
         </scene>
-        <!--Table View Controller - Einstellungen-->
+        <!--Einstellungen Static Table View Controller - Einstellungen-->
         <scene sceneID="T3u-KT-xLh">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ObY-fL-Q0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="fLM-eP-xtK" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="EinstellungenStaticTableViewController" id="fLM-eP-xtK" customClass="EinstellungenStaticTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="dTS-uH-Hba">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -291,7 +291,7 @@
                         <sections>
                             <tableViewSection headerTitle="Zählernummern" id="05z-ZG-OSq">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="85" id="Ty2-G3-9Pb">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="zaehlerCell" rowHeight="85" id="Ty2-G3-9Pb">
                                         <rect key="frame" x="0.0" y="46" width="320" height="87"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -304,6 +304,9 @@
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="fLM-eP-xtK" id="PD8-x9-aqB"/>
+                                                    </connections>
                                                 </textView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="right" id="ld9-io-9Iz">
                                                     <rect key="frame" x="110" y="10" width="80" height="30"/>
@@ -315,7 +318,7 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="right" id="DCd-hM-MXP">
                                                     <rect key="frame" x="210" y="10" width="80" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation"/>
                                                 </textView>
@@ -349,7 +352,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Preise pro Einheit" id="7U1-t5-0Ki">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="85" id="9v0-9F-Pf4">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="preiseCell" rowHeight="85" id="9v0-9F-Pf4">
                                         <rect key="frame" x="0.0" y="179" width="320" height="87"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -414,8 +417,16 @@
                     <navigationItem key="navigationItem" title="Einstellungen" id="qHi-Cf-9jT">
                         <barButtonItem key="rightBarButtonItem" image="40-inbox.png" id="WqZ-8l-g1b">
                             <color key="tintColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="saveEinstellungenPressed:" destination="fLM-eP-xtK" id="YBq-bj-V9k"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="zaehlerGasTextView" destination="ld9-io-9Iz" id="Wsi-yH-sif"/>
+                        <outlet property="zaehlerStromTextView" destination="UBQ-aC-Xqw" id="OIB-Rn-X4F"/>
+                        <outlet property="zaehlerWasserTextView" destination="DCd-hM-MXP" id="bEf-M3-FeY"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1201" y="346"/>
@@ -440,6 +451,15 @@
         </class>
         <class className="AblesenWerteTableViewController" superclassName="JSMTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AblesenWerteTableViewController.h"/>
+        </class>
+        <class className="EinstellungenStaticTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EinstellungenStaticTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="saveEinstellungenPressed:"/>
+                <relationship kind="outlet" name="zaehlerGasTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="zaehlerStromTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="zaehlerWasserTextView" candidateClass="UITextView"/>
+            </relationships>
         </class>
         <class className="JSMTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/JSMTableViewController.h"/>

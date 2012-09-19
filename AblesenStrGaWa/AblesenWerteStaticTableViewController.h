@@ -11,6 +11,7 @@
 @class Werte;
 
 @interface AblesenWerteStaticTableViewController : UITableViewController
+
 @property (weak, nonatomic) IBOutlet UITextView *stromTextView;
 @property (weak, nonatomic) IBOutlet UITextView *gasTextView;
 @property (weak, nonatomic) IBOutlet UITextView *wasserTextView;
