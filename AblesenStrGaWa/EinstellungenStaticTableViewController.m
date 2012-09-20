@@ -14,9 +14,12 @@
 
 @implementation EinstellungenStaticTableViewController
 
-@synthesize zaehlerStromTextView;
-@synthesize zaehlerGasTextView;
-@synthesize zaehlerWasserTextView;
+@synthesize zaehlerStromTextField = _zaehlerStromTextField;
+@synthesize zaehlerGasTextField = _zaehlerGasTextField;
+@synthesize zaehlerWasserTextField = _zaehlerWasserTextField;
+@synthesize preisStromTextField = _preisStromTextField;
+@synthesize preisGasTextField = _preisGasTextField;
+@synthesize preisWasserTextField = _preisWasserTextField;
 
 
 
@@ -24,10 +27,13 @@
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    self.zaehlerStromTextView.text = [defaults valueForKey:@"zaehlerStromTextView"];
-    self.zaehlerGasTextView.text = [defaults valueForKey:@"zaehlerGasTextView"];
-    self.zaehlerWasserTextView.text = [defaults valueForKey:@"zaehlerWasserTextView"];
+    self.zaehlerStromTextField.text = [defaults valueForKey:@"zaehlerStromTextField"];
+    self.zaehlerGasTextField.text = [defaults valueForKey:@"zaehlerGasTextField"];
+    self.zaehlerWasserTextField.text = [defaults valueForKey:@"zaehlerWasserTextField"];
     
+    self.preisStromTextField.text = [defaults valueForKey:@"preisStromTextField"];
+    self.preisGasTextField.text = [defaults valueForKey:@"preisGasTextField"];
+    self.preisWasserTextField.text = [defaults valueForKey:@"preisWasserTextField"];
     
 
 }
@@ -59,9 +65,13 @@
 {
 
 
-    [self setZaehlerStromTextView:nil];
-    [self setZaehlerGasTextView:nil];
-    [self setZaehlerWasserTextView:nil];
+    [self setPreisStromTextField:nil];
+    [self setPreisGasTextField:nil];
+    [self setPreisWasserTextField:nil];
+    [self setZaehlerStromTextField:nil];
+    [self setZaehlerGasTextField:nil];
+    [self setZaehlerWasserTextField:nil];
+    
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -154,19 +164,48 @@
 
 - (IBAction)saveEinstellungenPressed:(id)sender
 {
-    [self.zaehlerStromTextView resignFirstResponder];
-    [self.zaehlerGasTextView resignFirstResponder];
-    [self.zaehlerWasserTextView resignFirstResponder];
+    [self.zaehlerStromTextField resignFirstResponder];
+    [self.zaehlerGasTextField resignFirstResponder];
+    [self.zaehlerWasserTextField resignFirstResponder];
     
+    [self.preisStromTextField resignFirstResponder];
+    [self.preisGasTextField resignFirstResponder];
+    [self.preisWasserTextField resignFirstResponder];
+   
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    [defaults setObject:self.zaehlerStromTextView.text forKey:@"zaehlerStromTextView"];
-    [defaults setObject:self.zaehlerGasTextView.text forKey:@"zaehlerGasTextView"];
-    [defaults setObject:self.zaehlerWasserTextView.text forKey:@"zaehlerWasserTextView"];
+    // Observer abmelden, damit nach dem Speichern des TextFields gleich die “alten” Defaults für
+    // switch3d und slider geladen werden!
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:NSUserDefaultsDidChangeNotification
+                                                  object:nil];
     
+    [defaults setObject:self.zaehlerStromTextField.text forKey:@"zaehlerStromTextField"];
+    [defaults setObject:self.zaehlerGasTextField.text forKey:@"zaehlerGasTextField"];
+    [defaults setObject:self.zaehlerWasserTextField.text forKey:@"zaehlerWasserTextfield"];
+
+    [defaults setObject:self.preisStromTextField.text forKey:@"preisStromTextfield"];
+    [defaults setObject:self.preisGasTextField.text forKey:@"preisGasTextField"];
+    [defaults setObject:self.preisWasserTextField.text forKey:@"preisWasserTextField"];
+
     // Jetzt speichern
     [defaults synchronize];
     
+    // Observer wieder anmelden
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(loadDefaults)
+                                                 name:NSUserDefaultsDidChangeNotification
+                                               object:nil];
+    
+
+    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSLog(@"----->%@", textField.text);
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end

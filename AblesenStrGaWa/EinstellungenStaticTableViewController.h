@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EinstellungenStaticTableViewController : UITableViewController 
+@interface EinstellungenStaticTableViewController : UITableViewController <UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextView *zaehlerStromTextView;
-@property (weak, nonatomic) IBOutlet UITextView *zaehlerGasTextView;
-@property (weak, nonatomic) IBOutlet UITextView *zaehlerWasserTextView;
+@property (weak, nonatomic) IBOutlet UITextField *zaehlerStromTextField;
+@property (weak, nonatomic) IBOutlet UITextField *zaehlerGasTextField;
+@property (weak, nonatomic) IBOutlet UITextField *zaehlerWasserTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *preisStromTextField;
+@property (weak, nonatomic) IBOutlet UITextField *preisGasTextField;
+@property (weak, nonatomic) IBOutlet UITextField *preisWasserTextField;
+
 
 - (IBAction)saveEinstellungenPressed:(id)sender;
 @end

@@ -11,18 +11,8 @@
 			<string>PSGroupSpecifier</string>
 		</dict>
 		<dict>
-			<key>AutocapitalizationType</key>
-			<string>None</string>
-			<key>AutocorrectionType</key>
-			<string>No</string>
-			<key>DefaultValue</key>
-			<string></string>
-			<key>IsSecure</key>
-			<false/>
 			<key>Key</key>
-			<string>zaehlerStromTextView</string>
-			<key>KeyboardType</key>
-			<string>NumbersAndPunctuation</string>
+			<string>zaehlerStromTextField</string>
 			<key>Title</key>
 			<string>Stromzähler</string>
 			<key>Type</key>
@@ -34,7 +24,7 @@
 			<key>Title</key>
 			<string>Gaszähler</string>
 			<key>Key</key>
-			<string>zaehlerGasTextView</string>
+			<string>zaehlerGasTextField</string>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -42,7 +32,37 @@
 			<key>Title</key>
 			<string>Wasserzähler</string>
 			<key>Key</key>
-			<string>zaehlerWasserTextView</string>
+			<string>zaehlerWasserTextField</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Grundpreise</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Strompreis</string>
+			<key>Key</key>
+			<string>preisStromTextField</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Gaspreis</string>
+			<key>Key</key>
+			<string>preisGasTextField</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Wasserpreis</string>
+			<key>Key</key>
+			<string>preisWasserTextField</string>
 		</dict>
 	</array>
 	<key>StringsTable</key>
