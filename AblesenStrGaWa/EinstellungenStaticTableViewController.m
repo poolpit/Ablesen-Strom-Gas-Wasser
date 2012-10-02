@@ -14,7 +14,7 @@
 
 @implementation EinstellungenStaticTableViewController
 
-@synthesize zaehlerStromTextField = _zaehlerStromTextField;
+@synthesize zaehlerStromTextField =  _zaehlerStromTextField;
 @synthesize zaehlerGasTextField = _zaehlerGasTextField;
 @synthesize zaehlerWasserTextField = _zaehlerWasserTextField;
 @synthesize preisStromTextField = _preisStromTextField;
@@ -72,6 +72,7 @@
     [self setZaehlerGasTextField:nil];
     [self setZaehlerWasserTextField:nil];
     
+    [self setZaehlerStromTextField:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -161,7 +162,10 @@
      */
 }
 
-
+/*
+- (IBAction)tabView:(id)sender {
+}
+*/
 - (IBAction)saveEinstellungenPressed:(id)sender
 {
     [self.zaehlerStromTextField resignFirstResponder];
@@ -182,9 +186,9 @@
     
     [defaults setObject:self.zaehlerStromTextField.text forKey:@"zaehlerStromTextField"];
     [defaults setObject:self.zaehlerGasTextField.text forKey:@"zaehlerGasTextField"];
-    [defaults setObject:self.zaehlerWasserTextField.text forKey:@"zaehlerWasserTextfield"];
+    [defaults setObject:self.zaehlerWasserTextField.text forKey:@"zaehlerWasserTextField"];
 
-    [defaults setObject:self.preisStromTextField.text forKey:@"preisStromTextfield"];
+    [defaults setObject:self.preisStromTextField.text forKey:@"preisStromTextField"];
     [defaults setObject:self.preisGasTextField.text forKey:@"preisGasTextField"];
     [defaults setObject:self.preisWasserTextField.text forKey:@"preisWasserTextField"];
 

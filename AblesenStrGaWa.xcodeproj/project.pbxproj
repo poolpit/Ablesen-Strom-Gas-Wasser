@@ -32,6 +32,7 @@
 		D0AB5FCF1609004C006E24E3 /* 179-notepad.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AB5FCE1609004C006E24E3 /* 179-notepad.png */; };
 		D0AB5FD1160909D1006E24E3 /* 40-inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AB5FD0160909D1006E24E3 /* 40-inbox.png */; };
 		D0AB5FD416090EA8006E24E3 /* EinstellungenStaticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AB5FD316090EA8006E24E3 /* EinstellungenStaticTableViewController.m */; };
+		D0D2D029160BA835005701BE /* VerbrauchWerteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D2D028160BA835005701BE /* VerbrauchWerteTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,8 @@
 		D0AB5FD0160909D1006E24E3 /* 40-inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "40-inbox.png"; sourceTree = "<group>"; };
 		D0AB5FD216090EA8006E24E3 /* EinstellungenStaticTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EinstellungenStaticTableViewController.h; sourceTree = "<group>"; };
 		D0AB5FD316090EA8006E24E3 /* EinstellungenStaticTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EinstellungenStaticTableViewController.m; sourceTree = "<group>"; };
+		D0D2D027160BA835005701BE /* VerbrauchWerteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbrauchWerteTableViewController.h; sourceTree = "<group>"; };
+		D0D2D028160BA835005701BE /* VerbrauchWerteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbrauchWerteTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,8 +227,18 @@
 			children = (
 				D0AB5FD216090EA8006E24E3 /* EinstellungenStaticTableViewController.h */,
 				D0AB5FD316090EA8006E24E3 /* EinstellungenStaticTableViewController.m */,
+				D0D2D025160BA801005701BE /* Verbrauch */,
 			);
 			name = Einstellungen;
+			sourceTree = "<group>";
+		};
+		D0D2D025160BA801005701BE /* Verbrauch */ = {
+			isa = PBXGroup;
+			children = (
+				D0D2D027160BA835005701BE /* VerbrauchWerteTableViewController.h */,
+				D0D2D028160BA835005701BE /* VerbrauchWerteTableViewController.m */,
+			);
+			name = Verbrauch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +322,7 @@
 				D088702B160116C100011AC7 /* Werte.m in Sources */,
 				D09BCB711607B600002520A8 /* AblesenWerteStaticTableViewController.m in Sources */,
 				D0AB5FD416090EA8006E24E3 /* EinstellungenStaticTableViewController.m in Sources */,
+				D0D2D029160BA835005701BE /* VerbrauchWerteTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
