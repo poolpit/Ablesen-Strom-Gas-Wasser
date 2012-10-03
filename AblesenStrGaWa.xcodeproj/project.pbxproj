@@ -133,6 +133,7 @@
 				D012D6E315FFCE9C001FF130 /* AppDelegate.m */,
 				D012D72215FFD3B7001FF130 /* AblesenWerte */,
 				D0AB5FD516090EAD006E24E3 /* Einstellungen */,
+				D055ECEA161B6B5100AA39E4 /* Verbrauch */,
 				D012D72115FFD3A5001FF130 /* Constants */,
 				D012D72015FFD38C001FF130 /* JSMToolbox */,
 				D012D72315FFD3C7001FF130 /* Storyboard */,
@@ -211,6 +212,15 @@
 			name = AblesenDataModel;
 			sourceTree = "<group>";
 		};
+		D055ECEA161B6B5100AA39E4 /* Verbrauch */ = {
+			isa = PBXGroup;
+			children = (
+				D0D2D027160BA835005701BE /* VerbrauchWerteTableViewController.h */,
+				D0D2D028160BA835005701BE /* VerbrauchWerteTableViewController.m */,
+			);
+			name = Verbrauch;
+			sourceTree = "<group>";
+		};
 		D0AB5FC91608FED7006E24E3 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,18 +237,8 @@
 			children = (
 				D0AB5FD216090EA8006E24E3 /* EinstellungenStaticTableViewController.h */,
 				D0AB5FD316090EA8006E24E3 /* EinstellungenStaticTableViewController.m */,
-				D0D2D025160BA801005701BE /* Verbrauch */,
 			);
 			name = Einstellungen;
-			sourceTree = "<group>";
-		};
-		D0D2D025160BA801005701BE /* Verbrauch */ = {
-			isa = PBXGroup;
-			children = (
-				D0D2D027160BA835005701BE /* VerbrauchWerteTableViewController.h */,
-				D0D2D028160BA835005701BE /* VerbrauchWerteTableViewController.m */,
-			);
-			name = Verbrauch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

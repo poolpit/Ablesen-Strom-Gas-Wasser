@@ -18,16 +18,22 @@
 @implementation VerbrauchWerteTableViewController
 @synthesize werteFetchedResultsController = _werteFetchedResultsController;
 
+ NSString *AnzahlDaten;
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [JSMCoreDataHelper performFetchOnFetchedResultsController: self.fetchedResultsController];
-    NSLog(@"%s", "In vewdidload");
+    
+//    NSLog(@"%s", "In vewdidload");
+//    NSLog(@"--Anzahl Daten--->%d", AnzahlDaten);
+
     //[self.navigationItem setRightBarButtonItems:nil animated:YES];
 
     
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -37,12 +43,10 @@
     Werte *wert = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     // Configure the cell...
-    //    cell.textLabel.text = wert.monatWert;
-    //    cell.detailTextLabel.text = wert.jahrWert;
+
     cell.textLabel.text = [NSString stringWithFormat:@"Monat: %@, Jahr: %@, ", wert.monatWert, wert.jahrWert];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Strom: %@, Gas: %@, Wasser: %@", wert.stromWert, wert.gasWert, wert.wasserWert];
-    
-    //cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", info.city, info.state];
+
     return cell;
 }
 
@@ -50,6 +54,10 @@
 - (NSFetchedResultsController *)fetchedResultsController
 {
     if (self.werteFetchedResultsController != nil) {
+        // Hier finde ich heraus, wieviele Datensätze ich habe
+        AnzahlDaten = [NSString stringWithFormat:@"%d", self.werteFetchedResultsController.fetchedObjects.count];
+        NSLog(@"--Anzahl Datensätze im Fetched ResultsController--->%@", AnzahlDaten);
+
         return self.werteFetchedResultsController;
     }
     
@@ -67,7 +75,7 @@
     self.werteFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:[JSMCoreDataHelper managedObjectContext] sectionNameKeyPath:nil cacheName:nil];
     
     self.werteFetchedResultsController.delegate = self;
-    
+        
     return self.werteFetchedResultsController;
 }
 /*
@@ -92,6 +100,24 @@
     //NSLog(@"%s", "In AblesenWerte barButtonItemAddPressed");
     [self performSegueWithIdentifier:@"neueWerte" sender:self];
     
+}
+*/
+
+/*
+#pragma mark - Umwandeln String zu Zahl und berechne
+
+- (void) wandleInZahl
+{
+    int AnzahlMonate;
+    
+    // Return the number of sections.
+    AnzahlMonate = [[self.fetchedResultsController sections] count];
+    
+    NSLog(@"--Anzahl Sections--->%i", AnzahlMonate);
+    NSLog(@"--Anzahl Daten--->%d", AnzahlDaten);
+
+
+
 }
 */
 @end

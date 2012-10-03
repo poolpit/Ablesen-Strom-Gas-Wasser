@@ -162,10 +162,7 @@
      */
 }
 
-/*
-- (IBAction)tabView:(id)sender {
-}
-*/
+
 - (IBAction)saveEinstellungenPressed:(id)sender
 {
     [self.zaehlerStromTextField resignFirstResponder];
@@ -183,6 +180,8 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:NSUserDefaultsDidChangeNotification
                                                   object:nil];
+    
+    // Variablen befüllen
     
     [defaults setObject:self.zaehlerStromTextField.text forKey:@"zaehlerStromTextField"];
     [defaults setObject:self.zaehlerGasTextField.text forKey:@"zaehlerGasTextField"];

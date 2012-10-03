@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EinstellungenStaticTableViewController : UITableViewController <UITextFieldDelegate> //id<UIGestureRecognizerDelegate>
-
+@interface EinstellungenStaticTableViewController : UITableViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *zaehlerStromTextField;
 @property (weak, nonatomic) IBOutlet UITextField *zaehlerGasTextField;
@@ -18,8 +17,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *preisStromTextField;
 @property (weak, nonatomic) IBOutlet UITextField *preisGasTextField;
 @property (weak, nonatomic) IBOutlet UITextField *preisWasserTextField;
-//- (IBAction)tabView:(id)sender;
 
 - (IBAction)saveEinstellungenPressed:(id)sender;
+
 @end
 
