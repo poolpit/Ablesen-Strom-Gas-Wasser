@@ -219,7 +219,7 @@
         [self.tableView setContentOffset:CGPointMake(0, 0) animated:YES];
     } else {
         self.searchBar.text = nil;
-        //        [self searchBar:self.searchBar textDidChange:nil];
+        [self searchBar:self.searchBar textDidChange:nil];
         if (self.tableView.contentOffset.y <= self.tableView.tableHeaderView.frame.size.height) {
             [self.tableView setContentOffset:CGPointMake(0, self.searchBar.frame.size.height) animated:YES];
             
@@ -321,6 +321,28 @@
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     [self.tableView endUpdates];
+}
+
+#pragma mark - UISearchBarDelegate
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    if (searchText.length > 0) {
+        // Lupe orange
+        self.barButtonItemSearch.tintColor = [UIColor orangeColor];
+    } else {
+        // Lupe wieder schwarz
+        self.barButtonItemSearch.tintColor = nil;
+    }
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    if (self.searchBar.isFirstResponder){
+        [self.searchBar resignFirstResponder];
+    }
 }
 
 @end

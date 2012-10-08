@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface JSMTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface JSMTableViewController : UITableViewController <NSFetchedResultsControllerDelegate, UISearchBarDelegate>
 
 - (NSFetchedResultsController *) fetchedResultsController;
 

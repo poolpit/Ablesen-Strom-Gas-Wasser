@@ -12,5 +12,7 @@ NSString *const cTextInputPath = @"Documents/TextInput.txt";
 
 NSString *const cEntityWerte = @"Werte";
 NSString *const cEntityWerteAttributeMonatWert = @"monatWert";
-NSString *const cEntityWertAttributeJahrWert = @"jahrWert";
-
+NSString *const cEntityWerteAttributeJahrWert = @"jahrWert";
+NSString *const cEntityWerteAttributeStromWert = @"stromWert";
+NSString *const cEntityWerteAttributeGasWert = @"gasWert";
+NSString *const cEntityWerteAttributeWasserWert = @"wasserWert";

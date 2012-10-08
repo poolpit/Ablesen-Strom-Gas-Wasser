@@ -14,16 +14,20 @@
 
 @interface AblesenWerteTableViewController ()
 @property (nonatomic, strong) NSFetchedResultsController *werteFetchedResultsController;
+@property (nonatomic, strong)NSPredicate *fetchPredicate;
+
 @end
 
 @implementation AblesenWerteTableViewController
 @synthesize werteFetchedResultsController = _werteFetchedResultsController;
+@synthesize fetchPredicate;
+
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [JSMCoreDataHelper performFetchOnFetchedResultsController: self.fetchedResultsController];
-    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -54,7 +58,10 @@
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:cEntityWerte inManagedObjectContext:[JSMCoreDataHelper managedObjectContext]];
     
     fetchRequest.entity = entityDescription;
+    fetchRequest.predicate = self.fetchPredicate;
+    
     fetchRequest.fetchBatchSize = 64;
+    
     
     NSSortDescriptor *sortMonatWert = [[NSSortDescriptor alloc] initWithKey:cEntityWerteAttributeMonatWert ascending:YES];
     
@@ -89,6 +96,24 @@
     //NSLog(@"%s", "In AblesenWerte barButtonItemAddPressed");
     [self performSegueWithIdentifier:@"neueWerte" sender:self];
     
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    [super searchBar:searchBar textDidChange:searchText];
+    if (searchText.length > 0) {
+        NSPredicate *filterPredicate = [NSPredicate predicateWithFormat:@"%K contains[c] %@", cEntityWerteAttributeJahrWert, searchText];
+        self.fetchPredicate = [NSCompoundPredicate andPredicateWithSubpredicates:[NSArray arrayWithObject:filterPredicate]];
+    }else {
+        // Filter wieder zurücksetzen
+        NSLog(@"%s", "Filter zurücksetzen");
+        //self.fetchPredicate = self.basePredicate;
+        self.fetchPredicate = nil;
+        
+    }
+    self.werteFetchedResultsController = nil;
+    [JSMCoreDataHelper performFetchOnFetchedResultsController:self.fetchedResultsController];
+    [self.tableView reloadData];
 }
 
 @end

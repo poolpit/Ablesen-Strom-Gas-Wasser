@@ -12,3 +12,6 @@ extern NSString *const cTextInputPath;  // Pfad und Dateiname für den TextInput
 extern NSString *const cEntityWerte;      // String für "Werte"
 extern NSString *const cEntityWerteAttributeMonatWert;      // String für "monatWert"
 extern NSString *const cEntityWerteAttributeJahrWert;         // String für "jahrWert"
+extern NSString *const cEntityWerteAttributeStromWert;         // String für "stromWert"
+extern NSString *const cEntityWerteAttributeGasWert;         // String für "gasWert"
+extern NSString *const cEntityWerteAttributeWasserWert;         // String für "wasserWert"

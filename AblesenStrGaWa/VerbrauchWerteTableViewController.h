@@ -12,6 +12,4 @@
 
 @interface VerbrauchWerteTableViewController : JSMTableViewController
 
-- (void) wandleInZahl;
-
 @end
