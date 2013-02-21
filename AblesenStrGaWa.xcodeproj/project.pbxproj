@@ -33,6 +33,7 @@
 		D088702B160116C100011AC7 /* Werte.m in Sources */ = {isa = PBXBuildFile; fileRef = D088702A160116C100011AC7 /* Werte.m */; };
 		D09BCB711607B600002520A8 /* AblesenWerteStaticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09BCB701607B600002520A8 /* AblesenWerteStaticTableViewController.m */; };
 		D0A203B5160A6057009FF687 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D0A203B4160A6057009FF687 /* Settings.bundle */; };
+		D0A22E5F16D69A4E00C16408 /* 17-bar-chart.png in Resources */ = {isa = PBXBuildFile; fileRef = D0A22E5E16D69A4E00C16408 /* 17-bar-chart.png */; };
 		D0AB5FCB1608FF48006E24E3 /* 19-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AB5FCA1608FF48006E24E3 /* 19-gear.png */; };
 		D0AB5FCF1609004C006E24E3 /* 179-notepad.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AB5FCE1609004C006E24E3 /* 179-notepad.png */; };
 		D0AB5FD1160909D1006E24E3 /* 40-inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AB5FD0160909D1006E24E3 /* 40-inbox.png */; };
@@ -81,6 +82,7 @@
 		D09BCB6F1607B600002520A8 /* AblesenWerteStaticTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AblesenWerteStaticTableViewController.h; sourceTree = "<group>"; };
 		D09BCB701607B600002520A8 /* AblesenWerteStaticTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AblesenWerteStaticTableViewController.m; sourceTree = "<group>"; };
 		D0A203B4160A6057009FF687 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		D0A22E5E16D69A4E00C16408 /* 17-bar-chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "17-bar-chart.png"; sourceTree = "<group>"; };
 		D0AB5FCA1608FF48006E24E3 /* 19-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-gear.png"; sourceTree = "<group>"; };
 		D0AB5FCE1609004C006E24E3 /* 179-notepad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "179-notepad.png"; sourceTree = "<group>"; };
 		D0AB5FD0160909D1006E24E3 /* 40-inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "40-inbox.png"; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			children = (
 				D0AB5FD0160909D1006E24E3 /* 40-inbox.png */,
 				D0AB5FCA1608FF48006E24E3 /* 19-gear.png */,
+				D0A22E5E16D69A4E00C16408 /* 17-bar-chart.png */,
 				D0AB5FCE1609004C006E24E3 /* 179-notepad.png */,
 			);
 			name = Icons;
@@ -318,6 +321,7 @@
 				D020FF09161CCF58006A1411 /* Default.png in Resources */,
 				D020FF0B161CCF60006A1411 /* Default@2x.png in Resources */,
 				D020FF0D161CCF67006A1411 /* Default-568h@2x.png in Resources */,
+				D0A22E5F16D69A4E00C16408 /* 17-bar-chart.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +386,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -402,7 +406,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -412,10 +416,15 @@
 		D012D6E815FFCE9C001FF130 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AblesenStrGaWa/AblesenStrGaWa-Prefix.pch";
 				INFOPLIST_FILE = "AblesenStrGaWa/AblesenStrGaWa-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -423,10 +432,15 @@
 		D012D6E915FFCE9C001FF130 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AblesenStrGaWa/AblesenStrGaWa-Prefix.pch";
 				INFOPLIST_FILE = "AblesenStrGaWa/AblesenStrGaWa-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

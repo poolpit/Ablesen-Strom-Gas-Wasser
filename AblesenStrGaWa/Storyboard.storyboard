@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ekI-zk-QNs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ekI-zk-QNs">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -60,7 +59,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="49"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QdR-1U-WVw">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QdR-1U-WVw">
                                             <rect key="frame" x="10" y="8" width="29" height="18"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
@@ -264,7 +263,7 @@
         <scene sceneID="LTF-qS-lkv">
             <objects>
                 <navigationController definesPresentationContext="YES" id="6q1-Py-PNY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Verbrauch" id="8HN-Sy-ZlR"/>
+                    <tabBarItem key="tabBarItem" title="Verbrauch" image="17-bar-chart.png" id="8HN-Sy-ZlR"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="Hwr-l2-h6s">
                         <autoresizingMask key="autoresizingMask"/>
@@ -463,10 +462,45 @@
         </scene>
     </scenes>
     <resources>
+        <image name="17-bar-chart.png" width="29" height="24"/>
         <image name="179-notepad.png" width="22" height="28"/>
         <image name="19-gear.png" width="26" height="26"/>
         <image name="40-inbox.png" width="24" height="24"/>
     </resources>
+    <classes>
+        <class className="AblesenWerteStaticTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AblesenWerteStaticTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="WerteEingebenDonePressed:"/>
+                <relationship kind="outlet" name="gasTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="jahrTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="monatTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="stromTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="wasserTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="AblesenWerteTableViewController" superclassName="JSMTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AblesenWerteTableViewController.h"/>
+        </class>
+        <class className="EinstellungenStaticTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EinstellungenStaticTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="saveEinstellungenPressed:"/>
+                <relationship kind="outlet" name="preisGasTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="preisStromTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="preisWasserTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="zaehlerGasTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="zaehlerStromTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="zaehlerWasserTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="JSMTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JSMTableViewController.h"/>
+        </class>
+        <class className="VerbrauchWerteTableViewController" superclassName="JSMTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VerbrauchWerteTableViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

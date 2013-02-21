@@ -18,7 +18,7 @@
 
 - (void) setup 
 {
-    self.textAlignment = UITextAlignmentCenter;
+    self.textAlignment = NSTextAlignmentCenter;
     self.layer.cornerRadius = self.font.pointSize * 0.8;
 }
 

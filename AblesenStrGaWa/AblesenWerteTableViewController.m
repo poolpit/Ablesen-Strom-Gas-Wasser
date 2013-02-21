@@ -22,6 +22,9 @@
 @synthesize werteFetchedResultsController = _werteFetchedResultsController;
 @synthesize fetchPredicate;
 
+NSString *AnzahlDaten;
+
+
 
 
 - (void)viewDidLoad
@@ -48,9 +51,14 @@
 }
 
 #pragma mark - must be overloaded methods
+
 - (NSFetchedResultsController *)fetchedResultsController
 {
     if (self.werteFetchedResultsController != nil) {
+        // Hier finde ich heraus, wieviele Datensätze ich habe
+        AnzahlDaten = [NSString stringWithFormat:@"%d", self.werteFetchedResultsController.fetchedObjects.count];
+        NSLog(@"--Anzahl Datensätze im Fetched ResultsController Ablesewerte--->%@", AnzahlDaten);
+        
         return self.werteFetchedResultsController;
     }
     
@@ -58,14 +66,13 @@
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:cEntityWerte inManagedObjectContext:[JSMCoreDataHelper managedObjectContext]];
     
     fetchRequest.entity = entityDescription;
-    fetchRequest.predicate = self.fetchPredicate;
-    
     fetchRequest.fetchBatchSize = 64;
     
-    
+    // Erst nach dem Jahr sortieren, dann nach dem, Monat
     NSSortDescriptor *sortMonatWert = [[NSSortDescriptor alloc] initWithKey:cEntityWerteAttributeMonatWert ascending:YES];
+    NSSortDescriptor *sortJahrWert = [[NSSortDescriptor alloc] initWithKey:cEntityWerteAttributeJahrWert ascending:YES];
     
-    NSArray *sortArray = [NSArray arrayWithObject:sortMonatWert];
+    NSArray *sortArray = [NSArray arrayWithObjects:sortJahrWert, sortMonatWert, nil];
     fetchRequest.sortDescriptors = sortArray;
     
     self.werteFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:[JSMCoreDataHelper managedObjectContext] sectionNameKeyPath:nil cacheName:nil];
@@ -73,6 +80,7 @@
     self.werteFetchedResultsController.delegate = self;
     
     return self.werteFetchedResultsController;
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
