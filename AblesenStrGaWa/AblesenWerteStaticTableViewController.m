@@ -15,11 +15,12 @@
 @end
 
 @implementation AblesenWerteStaticTableViewController
-@synthesize stromTextView;
-@synthesize gasTextView;
-@synthesize wasserTextView;
-@synthesize monatTextView;
-@synthesize jahrTextView;
+
+@synthesize stromTextField;
+@synthesize gasTextField;
+@synthesize wasserTextField;
+@synthesize monatTextField;
+@synthesize jahrTextField;
 @synthesize wert = _wert;
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -38,11 +39,11 @@
     [super viewDidLoad];
     
     if (self.wert != nil){
-        self.stromTextView.text = self.wert.stromWert;
-        self.gasTextView.text = self.wert.gasWert;
-        self.wasserTextView.text = self.wert.wasserWert;
-        self.monatTextView.text = self.wert.monatWert;
-        self.jahrTextView.text = self.wert.jahrWert;
+        self.stromTextField.text = self.wert.stromWert;
+        self.gasTextField.text = self.wert.gasWert;
+        self.wasserTextField.text = self.wert.wasserWert;
+        self.monatTextField.text = self.wert.monatWert;
+        self.jahrTextField.text = self.wert.jahrWert;
         
         if (self.wert.isInserted == true) {
             self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(WerteEingebenCancelPressed:)];
@@ -53,13 +54,14 @@
 
 - (void)viewDidUnload
 {
-    [self setStromTextView:nil];
-    [self setGasTextView:nil];
-    [self setWasserTextView:nil];
-    [self setMonatTextView:nil];
-    [self setJahrTextView:nil];
+
     self.wert = nil;
     
+    [self setStromTextField:nil];
+    [self setGasTextField:nil];
+    [self setWasserTextField:nil];
+    [self setJahrTextField:nil];
+    [self setMonatTextField:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -97,11 +99,11 @@
 {
 
     if (self.wert != nil) {
-        self.wert.stromWert = self.stromTextView.text;
-        self.wert.gasWert = self.gasTextView.text;
-        self.wert.wasserWert = self.wasserTextView.text;
-        self.wert.monatWert = self.monatTextView.text;
-        self.wert.jahrWert = self.jahrTextView.text;
+        self.wert.stromWert = self.stromTextField.text;
+        self.wert.gasWert = self.gasTextField.text;
+        self.wert.wasserWert = self.wasserTextField.text;
+        self.wert.monatWert = self.monatTextField.text;
+        self.wert.jahrWert = self.jahrTextField.text;
 
         [JSMCoreDataHelper saveManagedObjectContext:[JSMCoreDataHelper managedObjectContext]];
     }

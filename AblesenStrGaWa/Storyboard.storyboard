@@ -113,41 +113,6 @@
                                             <rect key="frame" x="10" y="1" width="300" height="137"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="right" id="uBR-1Z-KRE">
-                                                    <rect key="frame" x="7" y="7" width="81" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" keyboardType="numbersAndPunctuation"/>
-                                                </textView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="right" id="H3V-x2-cNT">
-                                                    <rect key="frame" x="110" y="7" width="81" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" keyboardType="numbersAndPunctuation"/>
-                                                </textView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="right" id="jEP-2e-ytW">
-                                                    <rect key="frame" x="208" y="7" width="81" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numbersAndPunctuation"/>
-                                                </textView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="VIG-oc-RjO">
-                                                    <rect key="frame" x="43" y="78" width="81" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numbersAndPunctuation"/>
-                                                </textView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="buX-Fk-7k7">
-                                                    <rect key="frame" x="199" y="78" width="81" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numbersAndPunctuation"/>
-                                                </textView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Strom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="dY2-KX-0jv">
                                                     <rect key="frame" x="26" y="45" width="42" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -183,6 +148,36 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wert" textAlignment="right" minimumFontSize="14" id="JMf-fk-eu4">
+                                                    <rect key="frame" x="7" y="7" width="83" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wert" textAlignment="right" minimumFontSize="14" id="jE4-y5-PxB">
+                                                    <rect key="frame" x="109" y="7" width="83" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wert" textAlignment="right" minimumFontSize="14" id="DkO-lQ-mnC">
+                                                    <rect key="frame" x="207" y="7" width="83" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wert" textAlignment="right" minimumFontSize="14" id="swO-HP-aEg">
+                                                    <rect key="frame" x="47" y="74" width="83" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wert" textAlignment="right" minimumFontSize="14" id="nxF-hK-QQk">
+                                                    <rect key="frame" x="198" y="74" width="83" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                                </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -204,11 +199,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="gasTextView" destination="H3V-x2-cNT" id="fW0-q5-0qa"/>
-                        <outlet property="jahrTextView" destination="buX-Fk-7k7" id="UqF-lN-JiJ"/>
-                        <outlet property="monatTextView" destination="VIG-oc-RjO" id="VNh-h7-meh"/>
-                        <outlet property="stromTextView" destination="uBR-1Z-KRE" id="wkE-CV-N5N"/>
-                        <outlet property="wasserTextView" destination="jEP-2e-ytW" id="5Y4-l8-RNd"/>
+                        <outlet property="gasTextField" destination="jE4-y5-PxB" id="oL5-9F-zpN"/>
+                        <outlet property="jahrTextField" destination="nxF-hK-QQk" id="4dY-hB-dKs"/>
+                        <outlet property="monatTextField" destination="swO-HP-aEg" id="cMD-GL-DL2"/>
+                        <outlet property="stromTextField" destination="JMf-fk-eu4" id="jmT-ie-gAy"/>
+                        <outlet property="wasserTextField" destination="DkO-lQ-mnC" id="6Li-nj-gYP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mCt-XL-V2y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -353,10 +348,10 @@
                                                         <outlet property="delegate" destination="fLM-eP-xtK" id="0RI-SE-CGB"/>
                                                     </connections>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nummer" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" id="J4c-6A-Fec">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nummer" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="15" id="J4c-6A-Fec">
                                                     <rect key="frame" x="210" y="10" width="80" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="fLM-eP-xtK" id="LDd-Kb-zkV"/>
@@ -467,40 +462,6 @@
         <image name="19-gear.png" width="26" height="26"/>
         <image name="40-inbox.png" width="24" height="24"/>
     </resources>
-    <classes>
-        <class className="AblesenWerteStaticTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AblesenWerteStaticTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="WerteEingebenDonePressed:"/>
-                <relationship kind="outlet" name="gasTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="jahrTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="monatTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="stromTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="wasserTextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="AblesenWerteTableViewController" superclassName="JSMTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AblesenWerteTableViewController.h"/>
-        </class>
-        <class className="EinstellungenStaticTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EinstellungenStaticTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="saveEinstellungenPressed:"/>
-                <relationship kind="outlet" name="preisGasTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="preisStromTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="preisWasserTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="zaehlerGasTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="zaehlerStromTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="zaehlerWasserTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="JSMTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/JSMTableViewController.h"/>
-        </class>
-        <class className="VerbrauchWerteTableViewController" superclassName="JSMTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VerbrauchWerteTableViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
